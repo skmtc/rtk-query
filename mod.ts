@@ -1,6 +1,6 @@
 import type { TransformerArgs } from '@skmtc/skmtc/schematic-types'
-import { Endpoint } from './lib/Endpoint.ts'
-import { QueryContainer } from './lib/Container.ts'
+import { Endpoint } from './src/Endpoint.ts'
+import { QueryContainer } from './src/Container.ts'
 import { withDescription } from '@skmtc/skmtc/typescript/withDescription.ts'
 
 const transform = ({ context, transformerSettings }: TransformerArgs) => {
