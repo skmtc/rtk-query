@@ -1,8 +1,8 @@
 {
   "name": "@skmtc/rtk-query",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "exports": "./mod.ts",
   "imports": {
-    "@skmtc/skmtc": "jsr:@skmtc/skmtc@0.0.2"
+    "@skmtc/skmtc": "jsr:@skmtc/skmtc@0.0.4"
   }
 }

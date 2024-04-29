@@ -1,13 +1,12 @@
 import { QueryCall } from './QueryCall.ts'
-import { toOperationResponse } from '@skmtc/skmtc/typescript/toOperationResponse.ts'
-import type { CoreContext } from '@skmtc/skmtc/CoreContext.ts'
+import { toOperationResponse } from '@skmtc/skmtc/typescript'
+import type { CoreContext } from '@skmtc/skmtc/context'
 import { SchematicBase } from '@skmtc/skmtc/dsl'
-import type { OperationSettings } from '@skmtc/skmtc/OperationSettings.ts'
+import type { OperationSettings } from '@skmtc/skmtc/settings'
 import type { Stringable, Definition } from '@skmtc/skmtc/dsl'
-import { toInferredType } from '@skmtc/skmtc/typescript/toInferredType.ts'
-import type { OasOperation } from '@skmtc/skmtc/Operation.ts'
+import type { OasOperation } from '@skmtc/skmtc/oas-elements'
 import { toEndpointName, toEndpointType } from '@skmtc/skmtc/naming.ts'
-import { toOperationArg } from '@skmtc/skmtc/typescript/toOperationArg.ts'
+import { toOperationArg, toInferredType } from '@skmtc/skmtc/typescript'
 
 export type EndpointArgs = {
   context: CoreContext

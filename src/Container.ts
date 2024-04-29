@@ -1,7 +1,6 @@
-import type { CoreContext } from '@skmtc/skmtc/CoreContext.ts'
-import type { TransformerSettings } from '@skmtc/skmtc/TransformerSettings.ts'
-import { SchematicBase } from '@skmtc/skmtc/dsl'
-import type { Stringable } from '@skmtc/skmtc/dsl'
+import type { CoreContext } from '@skmtc/skmtc/context'
+import type { TransformerSettings } from '@skmtc/skmtc/settings'
+import { type Stringable, SchematicBase } from '@skmtc/skmtc/dsl'
 
 type QueryContainerProps = {
   context: CoreContext
@@ -39,7 +38,7 @@ export class QueryContainer extends SchematicBase implements Stringable {
   }
 
   toString(): string {
-    return `export const injectedRtkApi = createApi({
+    return `export const api = createApi({
       baseQuery: fetchBaseQuery({ baseUrl: '/' }),
       endpoints: build => ({${this.renderChildren(',\n')}})
     })`

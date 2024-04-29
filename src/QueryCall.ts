@@ -1,13 +1,9 @@
-import type { Stringable } from '@skmtc/skmtc/dsl'
-import { SchematicBase, EMPTY } from '@skmtc/skmtc/dsl'
-import type { CoreContext } from '@skmtc/skmtc/CoreContext.ts'
-import type { OasOperation } from '@skmtc/skmtc/Operation.ts'
-import type { OasParameter } from '@skmtc/skmtc/Parameter.ts'
-import { toPathTemplate } from '@skmtc/skmtc/typescript/toPathTemplate.ts'
-import type { OasRequestBody } from '@skmtc/skmtc/RequestBody.ts'
-import type { OasRef } from '@skmtc/skmtc/Ref.ts'
-import { keyValues } from '@skmtc/skmtc/typescript/keyValues.ts'
-import { toParamsObject } from '@skmtc/skmtc/typescript/toParamsObject.ts'
+import { type Stringable, SchematicBase, EMPTY } from '@skmtc/skmtc/dsl'
+import type { CoreContext } from '@skmtc/skmtc/context'
+import type { OasOperation, OasParameter } from '@skmtc/skmtc/oas-elements'
+import type { OasRequestBody, OasRef } from '@skmtc/skmtc/oas-elements'
+import { toPathTemplate } from '@skmtc/skmtc/typescript'
+import { keyValues, toParamsObject } from '@skmtc/skmtc/typescript'
 
 type QueryCallProps = {
   queryArg: string
